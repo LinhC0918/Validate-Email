@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate Email</title>
+</head>
+<body>
+    <script>
+        function validateEmail(str) {
+            var pattern =/^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+            if (pattern.test(str)){
+                console.log('Valid');
+            } else
+                console.log('Not Valid');
+        }
+        var string = 'a@gmail.com';
+        validateEmail(string);
+        var string = 'ab@yahoo.com';
+        validateEmail(string);
+        var string = 'abc@hotmail.com';
+        validateEmail(string);
+        var string = '@gmail.com';
+        validateEmail(string);
+        var string = 'ab@gmail.';
+        validateEmail(string);
+        var string = '@#abc@gmail.com';
+        validateEmail(string);
+    </script>
+</body>
+</html>
